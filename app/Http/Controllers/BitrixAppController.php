@@ -12,8 +12,8 @@ class BitrixAppController extends Controller
         //Bitrix init
         $appProfile = ApplicationProfile::initFromArray([
             'BITRIX24_PHP_SDK_APPLICATION_CLIENT_ID' => config('bitrix24.auth.clinet_id'),
-            'BITRIX24_PHP_SDK_APPLICATION_CLIENT_SECRET' => config('bitrix24.client_secret'),
-            'BITRIX24_PHP_SDK_APPLICATION_SCOPE' => config('bitrix24.scope'),
+            'BITRIX24_PHP_SDK_APPLICATION_CLIENT_SECRET' => config('bitrix24.auth.client_secret'),
+            'BITRIX24_PHP_SDK_APPLICATION_SCOPE' => config('bitrix24.auth.scope'),
         ]);
         $B24 = ServiceBuilderFactory::createServiceBuilderFromPlacementRequest(Request::createFromGlobals(), $appProfile);
         return view('b24api/index');
@@ -24,8 +24,8 @@ class BitrixAppController extends Controller
         //Bitrix init
         $appProfile = ApplicationProfile::initFromArray([
             'BITRIX24_PHP_SDK_APPLICATION_CLIENT_ID' => config('bitrix24.auth.clinet_id'),
-            'BITRIX24_PHP_SDK_APPLICATION_CLIENT_SECRET' => config('bitrix24.client_secret'),
-            'BITRIX24_PHP_SDK_APPLICATION_SCOPE' => config('bitrix24.scope'),
+            'BITRIX24_PHP_SDK_APPLICATION_CLIENT_SECRET' => config('bitrix24.auth.client_secret'),
+            'BITRIX24_PHP_SDK_APPLICATION_SCOPE' => config('bitrix24.auth.scope'),
         ]);
         $B24 = ServiceBuilderFactory::createServiceBuilderFromPlacementRequest(Request::createFromGlobals(), $appProfile);
         $result =  $B24->core->call('event.bind', [
