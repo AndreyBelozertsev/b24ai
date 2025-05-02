@@ -16,6 +16,7 @@ class BitrixAppController extends Controller
             'BITRIX24_PHP_SDK_APPLICATION_SCOPE' => config('bitrix24.scope'),
         ]);
         $B24 = ServiceBuilderFactory::createServiceBuilderFromPlacementRequest(Request::createFromGlobals(), $appProfile);
+        return view('b24api/index');
     }
 
     public function install(Request $request){
@@ -29,7 +30,7 @@ class BitrixAppController extends Controller
         $B24 = ServiceBuilderFactory::createServiceBuilderFromPlacementRequest(Request::createFromGlobals(), $appProfile);
         $B24->core->call('event.bind', [
                 'event' => 'OnImOpenLineMessageAdd',
-                'handler' => 'https://www.my-domain.ru/handler/',
+                'handler' => 'https://ai-crm.kobbauto-technical.ru/bitrix/incoming',
             ])->getResponseData()->getResult();
         return view('b24api/install', []);
     }

@@ -14,7 +14,7 @@
 
 <body class="bg-gray-50 p-6">
     <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
-        <h1 class="text-2xl font-bold text-gray-800 mb-6">Расчет вознаграждения за продажи</h1>
+        <h1 class="text-2xl font-bold text-gray-800 mb-6">AI приложение</h1>
         <h2 class="text-xl font-semibold text-gray-700 mb-4">Тест</h2>
     </div>
     <script src="//api.bitrix24.com/api/v1/"></script>
