@@ -3,4 +3,5 @@
 return [
     App\Providers\AppServiceProvider::class,
     App\Providers\BitrixServiceProvider::class,
+    App\Providers\MoonShineServiceProvider::class,
 ];
